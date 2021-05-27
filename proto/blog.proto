@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package blog;
+
+service Blog {
+    rpc getDetails( BlogRequest ) returns( BlogResponse ) {}
+}
+
+message BlogRequest {
+    int32 id = 1;
+}
+
+message BlogResponse {
+    BlogDetails message = 1;
+}
+
+message BlogDetails {
+    int32 id = 1;
+    string title = 2;
+    string slug = 3;
+    string excerpt = 4;
+    string text = 5;
+}
