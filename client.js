@@ -32,7 +32,7 @@ function main(){
     }
 
     client.getDetails({id: blogId}, (err, response) => {
-        console.log('Employee Details for Employee Id:',blogId,'\n' ,response.message);
+        console.log('Blog Details for Blog Id:', blogId, '\n', response.message);
     });
 }
 
